@@ -3,104 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Understudy | CPVC starter</title>
+  <title>The Understudy | Software reader</title>
   <style>
-    :root { color-scheme: light; --paper: #f5f3ed; --ink: #172e33; --teal: #24574e; }
+    :root { --paper: #f5f3ed; --ink: #172e33; --muted: #5c6664; --teal: #24574e; --line: #d8d4ca; }
     * { box-sizing: border-box; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font: 18px/1.6 Georgia, "Times New Roman", serif; }
-    main { max-width: 760px; margin: auto; padding: 48px 24px; }
-    h1, h2, button, .label { font-family: Arial, sans-serif; }
-    h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.08; letter-spacing: -.035em; margin: 20px 0; }
-    h2 { font-size: 23px; margin: 36px 0 8px; }
-    .label { color: var(--teal); font-size: 13px; letter-spacing: .06em; }
-    p { max-width: 60ch; }
-    dl { margin: 20px 0; }
-    .row { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid #c3cdc5; }
-    dt { flex: 1; }
-    dd { margin: 0; font-family: Arial, sans-serif; font-variant-numeric: tabular-nums; }
-    button { min-height: 44px; padding: 10px 18px; background: var(--teal); color: white; border: 0; font-size: 16px; cursor: pointer; }
-    button:focus-visible, a:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
-    button:active { background: var(--ink); }
-    a { color: var(--teal); text-underline-offset: 3px; }
-    code { overflow-wrap: anywhere; font-size: .9em; }
-    .note { border-top: 2px solid var(--teal); margin-top: 32px; padding-top: 16px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+    main { width: min(760px, calc(100% - 48px)); margin: 64px auto; }
+    .eyebrow, .label, button { font-family: Arial, sans-serif; }
+    .eyebrow { margin: 0 0 8px; color: var(--teal); font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; }
+    h1 { margin: 0 0 18px; font-size: 42px; line-height: 1.08; }
+    h2 { margin: 0 0 8px; font-size: 24px; }
+    p { margin: 0 0 18px; }
+    .answer { margin: 0 0 34px; padding-bottom: 26px; border-bottom: 1px solid var(--line); font-size: 23px; line-height: 1.45; }
+    section { margin: 28px 0; }
+    .label { margin: 0 0 4px; color: var(--muted); font-weight: 700; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .source { margin-top: 10px; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font: 14px/1.55 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .next { color: var(--teal); font-weight: 700; }
+    .pirate { font-style: italic; }
+    .status { color: var(--muted); font: 14px/1.5 Arial, sans-serif; }
+    button { border: 1px solid var(--teal); background: transparent; color: var(--teal); padding: 9px 14px; font-weight: 600; cursor: pointer; }
+    button:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
     [hidden] { display: none !important; }
-    @media (max-width: 400px) { main { padding: 28px 20px; } }
   </style>
 </head>
 <body>
   <main>
-    <p class="label">CPVC / SESSION 02 / FICTIONAL TEACHING DATA</p>
-    <h1>What would you want<br>this reader to understand?</h1>
-    <p>Project counts are a starting point, not a story. Choose one reader and one
-      question before asking an agent to build your answer.</p>
-    <p id="status" role="status" aria-live="polite">Loading the local sample…</p>
-    <button id="retry" type="button" hidden>Try again</button>
-    <section id="snapshot" aria-labelledby="name" hidden>
-      <h2 id="name"></h2>
-      <p id="bio"></p>
-      <dl id="stats"></dl>
-      <p id="source"></p>
-      <p>Only listed projects are available to inspect. A README flag says a file
-        is present, not that it is good. These facts do not establish project quality.</p>
+    <p class="eyebrow">The Understudy · Software &amp; Technology</p>
+    <h1>What should John use for his document tool?</h1>
+    <p class="answer">The profile does not give enough evidence to name a best software choice for database work or document question-answering. The strongest supported starting point is <strong>queue-lite</strong>: it is the most-starred of the five listed projects, and its description says it is a small durable job queue. That makes it worth inspecting, not proven to be the right database or document system.</p>
+
+    <section>
+      <p class="label">Fact</p>
+      <h2>What the data supports</h2>
+      <p><strong>queue-lite</strong> has 141 stars, more than the other four listed projects. The profile describes it as “A small durable job queue.”</p>
+      <div class="source">Source fields: repos[0].name = "queue-lite" · repos[0].stargazers_count = 141 · repos[0].description = "A small durable job queue" · repos[0].language = "Go"</div>
     </section>
-    <div class="note">
-      <strong>This is the starter, not the answer.</strong>
-      <p>Write your six-line TARGET in SPEC.md. Add one reader rule to AGENTS.md.
-        Then turn these facts into something that helps that person decide.</p>
-      <a href="https://github.com/calpolyvibecoding-01/cpvc-02-understudy-template#readme">Session instructions</a>
-    </div>
+
+    <section>
+      <p class="label">Interpretation</p>
+      <h2>What that means</h2>
+      <p>The project looks relevant to backend infrastructure, but stars do not establish database fit, document summarization, question answering, section retrieval, performance, or business success. This fixture is explicitly fictional.</p>
+      <div class="source">Profile status: _cpvc.status = "SYNTHETIC" · _cpvc.note = "Fictional teaching profile. Not a real person and not a live GitHub snapshot."</div>
+    </section>
+
+    <section>
+      <p class="label">Question</p>
+      <h2>What is still unknown?</h2>
+      <p>Does any listed project actually support the database and document features John needs? The profile metadata alone cannot answer that.</p>
+      <p class="next">Next action: inspect the relevant project documentation before choosing a database or document stack.</p>
+    </section>
+
+    <section aria-label="Reader rule">
+      <p class="label">Reader rule</p>
+      <p class="pirate">Explain each project in ordinary language before showing technical terms, without inventing a missing purpose. In other words: chart the waters before declaring the treasure.</p>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite">Loading the fictional local profile…</p>
+    <button id="retry" type="button" hidden>Try again</button>
   </main>
+
   <script>
-    // Choose ONE fixture named in SPEC.md. Keep the supplied JSON files unchanged.
-    const PROFILE = 'profile-starter.json';
-    const status = document.getElementById('status');
-    const retry = document.getElementById('retry');
-    const snapshot = document.getElementById('snapshot');
+    const PROFILE = 'profile-software.json';
+    const status = document.querySelector('#status');
+    const retry = document.querySelector('#retry');
 
     async function loadProfile() {
-      snapshot.hidden = true;
+      status.textContent = 'Loading the fictional local profile…';
       retry.hidden = true;
-      status.textContent = 'Loading the local sample…';
       try {
-        const response = await fetch(PROFILE);
-        if (!response.ok) throw new Error('File could not be loaded.');
+        const response = await fetch(PROFILE, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
-        if (!data.profile || !Array.isArray(data.repos) ||
-            data.repos.some(repo => !repo || typeof repo.name !== 'string' || typeof repo.has_readme !== 'boolean')) {
-          throw new Error('The sample needs a profile and a valid repos list.');
-        }
-        const rows = [
-          ['Listed projects', data.repos.length],
-          ['Listed projects with a README', data.repos.filter(repo => repo.has_readme).length],
-          ['Reported public repos', data.profile.public_repos ?? 'Not supplied']
-        ];
-        document.getElementById('name').textContent = data.profile.name || data.profile.login || 'Unnamed profile';
-        document.getElementById('bio').textContent = data.profile.bio || 'No bio supplied.';
-        const stats = document.getElementById('stats');
-        stats.replaceChildren();
-        for (const [label, value] of rows) {
-          const row = document.createElement('div');
-          row.className = 'row';
-          const term = document.createElement('dt');
-          const detail = document.createElement('dd');
-          term.textContent = label;
-          detail.textContent = String(value);
-          row.append(term, detail);
-          stats.append(row);
-        }
-        document.getElementById('source').textContent = 'Source: ' + PROFILE + ' · repos.length, repos[].has_readme, profile.public_repos';
-        snapshot.hidden = false;
-        status.textContent = data.repos.length ? 'Local sample loaded. No recommendation has been made.' : 'No listed projects. There is nothing to compare. Choose another supplied file in PROFILE and reload.';
+        if (!data.profile || !Array.isArray(data.repos)) throw new Error('Unexpected profile shape');
+        if (data._cpvc?.status !== 'SYNTHETIC') throw new Error('Profile is not marked synthetic');
+        if (!data.repos.every(repo => typeof repo.name === 'string' && typeof repo.has_readme === 'boolean')) throw new Error('Unexpected repo fields');
+        status.textContent = `Fictional profile loaded: ${data.repos.length} listed projects.`;
       } catch (error) {
-        status.textContent = 'Could not read the sample. Check the PROFILE filename and JSON, then try again. Use GitHub Pages or a local web server, not a double-clicked file.';
+        status.textContent = 'The local fictional profile could not be loaded. Check that profile-software.json is present, then try again.';
         retry.hidden = false;
       }
     }
+
     retry.addEventListener('click', loadProfile);
     loadProfile();
-    // Open-build test: use a nonexistent filename, inspect the message, then
-    // RESTORE PROFILE and reload successfully before reviewing and merging.
   </script>
 </body>
 </html>
