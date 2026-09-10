@@ -5,8 +5,7 @@ unclear, ask before editing. This file briefs the agent; it does not run the pag
 
 ## My reader rule
 
-[Replace with one observable rule. Example: explain each project in ordinary
-language before showing technical terms, without inventing a missing purpose.]
+Explain each project in ordinary language before showing technical terms, without inventing a missing purpose
 
 ## Scope and evidence
 
